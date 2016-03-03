@@ -4,21 +4,6 @@ function readCookie(name) {
   if (parts.length == 2) return parts.pop().split(";").shift();
 }
 
-// function getQS(qsParam) {
-// 	var qs = window.location.search;
-// 	var qsValue = 0;
-// 	if(qs) {
-
-// 	}
-
-// 	 qs.split(qsParam)[1] ? window.location.search.split(qsParam)[1] : 0;
-// 	 if (qsValue != 0) {
-// 	 	qsValue.split("&")[0]
-// 	 }
-// 	 alert(qsParam + "::" + qsValue);
-// 	 return parseInt(qsValue);
-// }
-
 function getQS(qsParam)
 {
     var qsVars = [];
@@ -38,10 +23,6 @@ function getQS(qsParam)
 		return 0;
 	}
 }
-
-// function setQS(nextPage, key, value) {
-// 	return nextPage + '?' + key + '=' + value;
-// }
 
 function setQS(url, key, value) {   
 	  if (key) {
