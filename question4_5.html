@@ -4,24 +4,25 @@
 <title></title>
 <script type="text/javascript" src="common.js"></script>
 <script type="text/javascript">
-console.log("window.location.search: " + window.location.search);
-	function submitPage() {
-      var vA = getQS('vA');
-      var vC = getQS('vC');
-      var selected = document.querySelector('input[name="option"]:checked').getAttribute("data-value");
-      if(selected) {
-        vA += 1;
-        if (selected == 'NASA') {
-            vC += 1;
+    console.log("window.location.search: " + window.location.search);
+
+    function submitPage() {
+        var vA = getQS('vA');
+        var vC = getQS('vC');
+        var selected = document.querySelector('input[name="option"]:checked').getAttribute("data-value");
+        if (selected) {
+            vA += 1;
+            if (selected == 'NASA') {
+                vC += 1;
+            }
         }
-      }
-      var nextPage = window.location.search;
-      nextPage = setQS(nextPage, 'vA', vA);
-      nextPage = setQS(nextPage, 'vC', vC);
-      document.forms[0].action = document.forms[0].action + nextPage;
-      console.log("Action: " + document.forms[0].action);
-      console.log("window.location.search: " + window.location.search);
-  }
+        var nextPage = window.location.search;
+        nextPage = setQS(nextPage, 'vA', vA);
+        nextPage = setQS(nextPage, 'vC', vC);
+        document.forms[0].action = document.forms[0].action + nextPage;
+        console.log("Action: " + document.forms[0].action);
+        console.log("window.location.search: " + window.location.search);
+    }
 </script>
 </head>
 <body>
